@@ -122,6 +122,8 @@ workflows:
       - release_package:
           requires:
             - build_package
+          context: 
+            - Tech - NPM Deployments            
           filters:
             branches:
               only:
