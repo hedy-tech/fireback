@@ -1,13 +1,13 @@
 <p align="center">
-    <a href="https://travis-ci.com/github/dev-vortex/fireback"><img src="https://badgen.net/travis/dev-vortex/fireback?icon=travis&label=build"/></a>
-    <a href="https://www.npmjs.com/package/@dev-vortex/fireback"><img src="https://badgen.net/npm/v/@dev-vortex/fireback?icon=npm&label"/></a>
-    <a href="https://www.npmjs.com/package/@dev-vortex/fireback"><img src="https://badgen.net/npm/license/@dev-vortex/fireback?icon=npm"/></a> 
-    <a href="https://www.npmjs.com/package/@dev-vortex/fireback"><img src="https://badgen.net/npm/types/@dev-vortex/fireback?icon=typescript"/></a> 
+    <a href="https://app.circleci.com/pipelines/github/hedy-tech/fireback"><img src="https://badgen.net/circleci/github/hedy-tech/fireback?icon=circleci&label=build"/></a>
+    <a href="https://www.npmjs.com/package/@hedy-tech/fireback"><img src="https://badgen.net/npm/v/@hedy-tech/fireback?icon=npm&label"/></a>
+    <a href="https://www.npmjs.com/package/@hedy-tech/fireback"><img src="https://badgen.net/npm/license/@hedy-tech/fireback?icon=npm"/></a> 
+    <a href="https://www.npmjs.com/package/@hedy-tech/fireback"><img src="https://badgen.net/npm/types/@hedy-tech/fireback?icon=typescript"/></a> 
 </p>
 
 <p align="center">
-    <a href="https://codeclimate.com/github/dev-vortex/fireback/maintainability"><img src="https://api.codeclimate.com/v1/badges/5419722b298d8f094d55/maintainability"/></a>
-    <a href="https://codeclimate.com/github/dev-vortex/fireback/test_coverage"><img src="https://api.codeclimate.com/v1/badges/5419722b298d8f094d55/test_coverage"/></a>
+    <a href="https://codeclimate.com/github/hedy-tech/fireback/maintainability"><img src="https://api.codeclimate.com/v1/badges/2c94531275b0ebe29577/maintainability"/></a>
+    <a href="https://codeclimate.com/github/hedy-tech/fireback/test_coverage"><img src="https://api.codeclimate.com/v1/badges/2c94531275b0ebe29577/test_coverage"/></a>
 </p>
 
 <p align="center">
@@ -20,13 +20,13 @@ This package aims to assist the firebase function export. and allows a flexible 
 
 ## Installation
 ```
-yarn add @dev-vortex/fireback
+yarn add @hedy-tech/fireback
 ```
 
 or
 
 ```
-npm install @dev-vortex/fireback
+npm install @hedy-tech/fireback
 ```
 
 ## Configuration
@@ -89,7 +89,7 @@ In your function project we will need to export all the developed functions so f
 Here we will make use of the `exportFunctions` method. This will be responsible to export all the functions that were registered by your project.
 
 ```typescript
-import { initApp } from '@dev-vortex/fireback'
+import { initApp } from '@hedy-tech/fireback'
 import { firebaseConfigObject } from './firebaseConfig' // your configuration
 
 initApp(firebaseConfigObject)
@@ -97,7 +97,7 @@ initApp(firebaseConfigObject)
 ```
 or
 ```typescript
-import { exportFunctions } from '@dev-vortex/fireback'
+import { exportFunctions } from '@hedy-tech/fireback'
 
 exports = module.exports = exportFunctions({
     ...
@@ -130,7 +130,7 @@ At this point any of the functioon creation methods will register the function t
 This is the most close function to Firebase API and it will create a function that can be used to any type of function that firebase may provide. It is responsible to localize the function in a specific location from any that is available by [firebase locations](https://firebase.google.com/docs/functions/locations)
 
 ```typescript
-import { callableFunction } from '@dev-vortex/fireback'
+import { callableFunction } from '@hedy-tech/fireback'
 
 export default callableFunction({
     functionRegion: 'europe-west1',
@@ -142,7 +142,7 @@ export default callableFunction({
 This kind of function allows us to setup a function (piece of code) that will run at a specific location on a specific time (within a specific [timezone](https://en.wikipedia.org/wiki/Tz_database)).
 
 ```typescript
-import { cronFunction } from '@dev-vortex/fireback'
+import { cronFunction } from '@hedy-tech/fireback'
 
 export default cronFunction(
     '5 11 * * *', 
@@ -161,7 +161,7 @@ export default cronFunction(
 This type of function will allow us to expose HTTPS services like REST APIs. Here you can use any service that respects the (request, response) service signature
 
 ```typescript
-import { httpsFunction } from '@dev-vortex/fireback'
+import { httpsFunction } from '@hedy-tech/fireback'
 // 1. Import your https service (eg: Express, Fastify, Koa, Hapi, TypeGraphQL, Moleculer)
 
 // 2. Prepare all the necessary endpoints/routes, security and logic withing the httpsService
@@ -177,7 +177,7 @@ export default httpsFunction(
 This type of function will allow us to trigger a function through a message sent pipeline/topic. This allows us to delegate extra processing of data passing it to other functions
 
 ```typescript
-import { pubSubFunction } from '@dev-vortex/fireback'
+import { pubSubFunction } from '@hedy-tech/fireback'
 
 export default pubSubFunction(
     'topic-name',
@@ -202,7 +202,7 @@ Since developers will use this library in a specific scope, we have added a help
 To use this helper you will need to:
 
 ```typescript
-import { getGlobalCacheManager } from '@dev-vortex/fireback'
+import { getGlobalCacheManager } from '@hedy-tech/fireback'
 
 // Set a new variable
 getGlobalCacheManager.set('variableName', 'variableValue')
