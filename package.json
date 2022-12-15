@@ -1,5 +1,5 @@
 {
-    "name": "@dev-vortex/fireback",
+    "name": "@hedy-tech/fireback",
     "version": "0.0.0-development",
     "description": "Firebase backend service",
     "keywords": [
@@ -9,11 +9,11 @@
         "service",
         "typescript"
     ],
-    "author": "Joao Correia <joao@correia.pw> (https://joao.correia.pw)",
+    "author": "Joao Correia <joao@hedy.tech> (https://hedy.tech)",
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dev-vortex/fireback.git"
+        "url": "https://github.com/hedy-tech/fireback.git"
     },
     "main": "./dist/index",
     "types": "./dist/types/index.d.ts",
