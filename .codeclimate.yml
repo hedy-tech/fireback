@@ -6,6 +6,7 @@ eslint:
             - .ts
             - .mjs
 exclude_patterns:
+  - ".circleci/"
   - ".yarn/"
   - "node_modules/"
   - "scripts/"
