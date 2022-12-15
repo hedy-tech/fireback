@@ -1,6 +1,6 @@
-// Type definitions for @dev-vortex/fireback
+// Type definitions for @hedy-tech/fireback
 // Project: Firebase backend service
-// Definitions by: Joao Correia https://joao.correia.pw
+// Definitions by: Joao Correia https://hedy.tech
 declare global {
     // eslint-disable-next-line no-var
     var firebackGlobalCache: Record<
