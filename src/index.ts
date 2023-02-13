@@ -5,6 +5,7 @@ export {
     cronFunction,
     httpsFunction,
     pubSubFunction,
+    getGlobalCacheManager,
 } from './firebase'
 
 // Initializing global cache variable
